@@ -16,6 +16,8 @@ spring:
           uri: lb://ntt-ms-accounts
           predicates:
             - Path=/accounts/**
+            - Path=/accounts/personal/**
+            - Path=/accounts/business/**
         - id: creditcards
           uri: lb://ntt-ms-creditcards
           predicates:
