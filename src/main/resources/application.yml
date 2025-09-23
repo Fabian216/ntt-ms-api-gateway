@@ -12,16 +12,20 @@ spring:
           uri: lb://ntt-ms-customers
           predicates:
             - Path=/customers/**
-            - Path=/customers/personal/**
-            - Path=/customers/business/**
         - id: accounts
           uri: lb://ntt-ms-accounts
           predicates:
             - Path=/accounts/**
+        - id: ntt-ms-credits
+          uri: lb://ntt-ms-credits
+          predicates:
+            - Path=/credits/**
         - id: creditcards
           uri: lb://ntt-ms-creditcards
           predicates:
             - Path=/creditCards/**
+
+server:
   port: 8080
 
 eureka:
